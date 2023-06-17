@@ -152,8 +152,7 @@ def recognize_fun(request):
                 x, y, s = face.shape
                 if x > 0 and y > 0:
                     # Preprocess face for the FaceNet model
-                    face = cv2.resize(face, (160, 160))
-                    # face = np.transpose(face, (2, 0, 1))
+                    face = cv2.resize(face, (224, 224))
                     face = np.expand_dims(face, axis=0)
                     face = (face - 127.5) / 128
 
@@ -261,8 +260,7 @@ def capture_images(request):
                 x, y, s = face.shape
                 if x > 0 and y > 0:
                     # Preprocess face for the FaceNet model
-                    face = cv2.resize(face, (160, 160))
-                    # face = np.transpose(face, (2, 0, 1))
+                    face = cv2.resize(face, (224, 224))
                     face = np.expand_dims(face, axis=0)
                     face = (face - 127.5) / 128
 
