@@ -6,6 +6,7 @@ gunicorn==20.1.0
 imshow==0.0.3
 imutils==0.5.4
 keras==2.11.0
+python-dotenv==0.21.0
 keras-facenet==0.3.2
 Keras-Preprocessing==1.1.2
 numpy==1.21.6
