@@ -7,14 +7,12 @@ from django.shortcuts import render
 import numpy as np
 import pickle
 from django.http import JsonResponse
-import torch
 from keras.applications import MobileNetV2
 from keras.models import Model
 from sklearn.decomposition import PCA
 from keras.layers import GlobalAveragePooling2D
 from django.http import HttpResponse
 from sklearn.neighbors import NearestNeighbors
-from facenet_pytorch import InceptionResnetV1
 
 Face_data = pd.DataFrame(columns=['Name', 'Embeddings'])
 Person_data = pd.DataFrame(columns=['Name', 'Image'])
