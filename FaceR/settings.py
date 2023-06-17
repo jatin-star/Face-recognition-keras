@@ -12,9 +12,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -25,7 +29,8 @@ SECRET_KEY = 'django-insecure-r$2-4oa4$78f42ir(976w_(e+%z+4kvr^u&u3pm0v3ubi-*5ni
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.onrender.com', '*']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.onrender.com']
+
 
 
 # Application definition
