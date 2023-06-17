@@ -4,6 +4,7 @@ Django==3.2.5
 gunicorn==20.1.0
 imshow==0.0.3
 imutils==0.5.4
+tensorflow==2.3.4
 keras==2.4.3
 python-dotenv==0.15.0
 keras-facenet==0.3.2
