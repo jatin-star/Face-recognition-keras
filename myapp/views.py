@@ -13,6 +13,7 @@ from sklearn.decomposition import PCA
 from keras.layers import GlobalAveragePooling2D
 from django.http import HttpResponse
 from sklearn.neighbors import NearestNeighbors
+from keras.models import load_model
 
 Face_data = pd.DataFrame(columns=['Name', 'Embeddings'])
 Person_data = pd.DataFrame(columns=['Name', 'Image'])
@@ -26,18 +27,18 @@ pca = PCA(n_components=128)
 
 # resnet = InceptionResnetV1(pretrained='vggface2').eval()
 
-
+model = load_model(BASE_DIR + "/myapp/static/mobilenetv2_model.h5")
 
 # Load the pre-trained MobileNetV2 model
 
-base_model = MobileNetV2(weights='imagenet', include_top=False)
-# Add a GlobalAveragePooling2D layer to reduce dimensionality
-x = base_model.output
-x = GlobalAveragePooling2D()(x)
+# base_model = MobileNetV2(weights='imagenet', include_top=False)
+# # Add a GlobalAveragePooling2D layer to reduce dimensionality
+# x = base_model.output
+# x = GlobalAveragePooling2D()(x)
 
 
-# Create a new model with the base MobileNetV2 model as input and the pooling layer as output
-model = Model(inputs=base_model.input, outputs=x)
+# # Create a new model with the base MobileNetV2 model as input and the pooling layer as output
+# model = Model(inputs=base_model.input, outputs=x)
 
 
 
