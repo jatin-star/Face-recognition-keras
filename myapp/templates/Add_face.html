@@ -55,6 +55,8 @@ h1{
     <div id="responseMessage"></div>
     </div>
 
+    <h3>At least 130 images are required</h3>
+
     <script>
         var name = document.getElementById('name');
         var video = document.getElementById('video');
@@ -104,6 +106,9 @@ h1{
                     track.stop();
                 });
                 mediaStream = null;
+            }
+	    if ((capturedImages.length) > 128){
+                 prepareBtn.disabled = false;
             }
         });
 
