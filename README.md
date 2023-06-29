@@ -11,3 +11,5 @@
 
 ### Face recognition application  
 ### Used Technologies  --> Python, Django, Vggface2, FLANN algorithm, PCA for preprocessing and JavaScript
+
+### Video Demo --> https://youtu.be/uP0wDVjMJXE
